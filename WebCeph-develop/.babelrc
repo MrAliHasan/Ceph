@@ -1,0 +1,37 @@
+{
+  "sourceMaps": "both",
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "browsers": [
+          "last 5 Chrome versions",
+          "last 5 Firefox versions",
+          "last 2 Edge versions"
+        ]
+      }
+    ],
+    "stage-3",
+    "react"
+  ],
+  "plugins": [
+    "transform-object-rest-spread"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-runtime",
+        "minify-empty-function",
+        "transform-inline-environment-variables",
+        "transform-node-env-inline",
+        "transform-remove-console",
+        "transform-remove-debugger"
+      ],
+      "presets": [
+        "react-optimize"
+      ]
+    },
+    "sourceMaps": false
+  }
+}

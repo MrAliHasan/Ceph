@@ -1,0 +1,40 @@
+.root {
+  overflow: scroll;
+  display: flex;
+  background-color: #272727;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.lens {
+}
+
+.loading_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+}
+
+.sidebar {
+  &_hidden {
+    display: none;
+  }
+  width: 25vw;
+  max-width: 25vw;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  .selector {
+    flex-grow: 0;
+    width: 100%;
+  }
+  .stepper {
+    flex-grow: 1;
+  }
+}

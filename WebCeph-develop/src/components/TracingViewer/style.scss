@@ -1,0 +1,66 @@
+.root {
+  
+}
+
+.canvas {
+  background: #272727;
+}
+
+.image {
+  will-change: opacity, transform;
+  transition-property: transform, opacity;
+  transition-duration: 0.1s;
+}
+
+.landmark {
+  stroke-width: 1.3mm;
+  pointer-events: none;
+  will-change: transform, opacity;
+  transition-property: transform, opacity, fill, stroke;
+  transition-duration: 0.5s;
+  transform-origin: 50% 50%;
+}
+
+.point {
+  @extend .landmark;
+  stroke: black;
+  fill: white;
+}
+
+.vector {
+  @extend .landmark;
+  stroke: black;
+
+  &_extended {
+    @extend .vector;
+    stroke-dasharray: 15 10;
+    opacity: 0;
+    stroke: greenyellow;
+  }
+
+  &_parallel {
+    @extend .vector_extended;
+  }
+}
+
+.highlighted {
+  stroke: orange;
+  fill: orange;
+  opacity: 1;
+}
+
+.unhighlighted {
+  opacity: 0;
+}
+
+.angle_indicator {
+  @extend .vector_extended;
+  fill: none !important;
+  opacity: 0;
+  &.highlighted {
+    opacity: 1;
+  }
+  &.unhighlighted {
+    opacity: 0;
+  }
+}

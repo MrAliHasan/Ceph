@@ -1,0 +1,28 @@
+{
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/node_modules/**": true,
+    "build/**": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "build/": true,
+    "src/assets/breeze-icons": true
+  },
+  "editor.tabSize": 2,
+  "editor.renderLineHighlight": "all",
+  "editor.scrollBeyondLastLine": false,
+  "files.insertFinalNewline": true,
+  "tslint.autoFixOnSave": false,
+  "tslint.ignoreDefinitionFiles": false,
+  "tslint.exclude": [
+    "node_modules/**/*",
+    "**/*.js"
+  ],
+  "circleci.apiKey": "77dd78953735761b965260b0f49f225339b8dfcf",
+  "circleci.rate": "300"
+}
